@@ -1,0 +1,9 @@
+n - n = Assosiativa
+1 - 1
+1 - n 
+[ entre colchetes é opicional ]
+; é opicional
+para dar insert de decimal é necessario colocar o numero dps da virgula exemplo: 
+
+Se eu quiser dar insert de 8,2 no insert eu preciso colocar 10,2;
+A logica é que o numero dps da virgula vai subitrair o numero antes da virgula e colocar o resultado no banco.
