@@ -1,0 +1,13 @@
+{
+  "name": "exercicios de python",
+  "authors": ["Gabriel Araújo Lima", "Andrey Nardy de Sa Santoniello"],
+  "description": "exercicios de python passados pela profa marion",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/themyntt/exercicios-python",
+    "type": "git"
+  },
+  "dependencies": {
+    "python": ">=3.10"
+  }
+}
