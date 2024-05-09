@@ -49,7 +49,7 @@ def exibe_indice_impar(vet : list) -> None:
 # Exec 8:
 def exibe_igual(vet : list, n : int) -> bool:
     for item in v:
-        if ( v == item):
+        if (v == item):
             return True
     
     return False
@@ -100,7 +100,7 @@ def ordenar_vetor_crescente(v1 : list) -> None:
                 aux = v1[j]
                 v1[j] = v1[j + 1]
                 v1[j + 1] = aux
-    print("v1 = ", str(v1))
+    print("v = ", str(v1))
 
 # Exec 13:
 def ordenar_vetor_decrescente(v1 : list) -> None:
@@ -110,16 +110,18 @@ def ordenar_vetor_decrescente(v1 : list) -> None:
                 temp = v1[j]
                 v1[j] = v1[j + 1]
                 v1[j + 1] = temp
-    print("v1 = ", str(v1))
+    print("v = ", str(v1))
 
 # Exec 14:
-tipo = 'c'
-def ordenar_vetor(v1 : list, tipo : str) -> None:
+def ordenar_vetor(v1 : list) -> None:
+    tipo = input("C para cresente\nD para decrescente")
     match(tipo.lower()):
         case 'c':
-            ordenar_vetor_crescente(v1, v2)
+            ordenar_vetor_crescente(v1)
+            ordenar_vetor_crescente(v2)
         case 'd':
-            ordenar_vetor_decrescente(v1, v2)
+            ordenar_vetor_decrescente(v1)
+            ordenar_vetor_decrescente(v2)
         case _:
             print("Selecione uma opição valida!!!")
 
@@ -214,13 +216,13 @@ Digita um exercicio ai calabreso:
         case '13':
             ordenar_vetor_decrescente(v1)
         case '14':
-            ordenar_vetor(v1, tipo)
+            ordenar_vetor(v1)
         case '15':
             separa_pares_impares(v1)
         case '16':
-            conta_acima_media(v1)
+            print(conta_acima_media(v1))
         case '17':
-            maior_elemento(v1)
+            print(maior_elemento(v1))
         case '0':
             break
         case _:
