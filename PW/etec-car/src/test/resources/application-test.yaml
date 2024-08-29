@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: etec-car-test
+
+  datasource:
+    url: jdbc:sqlserver://localhost;databaseName=ETEC_CAR_TEST;encrypt=true;trustServerCertificate=true
+    username: sa
+    password: '*123456HAS*'
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      properties:
+        hibernate.id.new_generator_mappings: false
+    show-sql: true
+    format-sql: true

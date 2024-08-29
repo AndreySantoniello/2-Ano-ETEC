@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: etec-projeto
+
+  datasource:
+    url: jdbc:sqlserver://localhost;databaseName=PROJETOS;encrypt=true;trustServerCertificate=true
+    username: sa
+    password: '*123456HAS*'
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    jpa:
+      hibernate:
+        ddl-auto: validate
+      show-sql: true
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.SQLServerDialect
+    sql:
+      init:
+        mode: always

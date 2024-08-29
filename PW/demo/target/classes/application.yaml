@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: pw-study
+
+  datasource:
+    url: jdbc:sqlserver://localhost;databaseName=ETEC_CAR;encrypt=true;trustServerCertificate=true
+    username: sa
+    password: '*123456HAS*'
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      properties:
+        hibernate:
+          id:
+            new_generator_mappings: false
+    show-sql: true
+    format-sql: true
