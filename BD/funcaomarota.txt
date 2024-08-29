@@ -1,0 +1,19 @@
+declare
+	v_cd_ven number(4) := 111;
+	v_nome_ven varchar(20);
+	v_com char(1);
+	v_sal_ven number(12,2);
+begin
+	select salario_ven , comissao into v_sal_ven, v_com
+	from Vendedor where cod_ven = v_cd_ven;
+	if v_com = 'A' then
+		dbms_output.put_line('Salario reajustado: '|| v_sal_ven * 1.1);
+		update Vendedor set salario_ven = salario_ven * 1.1;
+	elsif v_com = 'B' then 
+        dbms_output.put_line('Salario reajustado: '|| v_sal_ven * 1.12);
+		update Vendedor set salario_ven = salario_ven * 1.12;
+	else
+        dbms_output.put_line('Salario reajustado: '|| v_sal_ven * 1.13);
+		update Vendedor set salario_ven = salario_ven * 1.13;
+	end if;
+end;
